@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Lab</title>
+
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #111827;
+            --card: #1b2638;
+            --border: #334155;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #60a5fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 24px;
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        h2 {
+            margin: 32px 0 16px;
+            font-size: 1.25rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(240px, 1fr)
+            );
+            gap: 16px;
+        }
+
+        .card {
+            padding: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 1.15rem;
+        }
+
+        .card p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .card a {
+            color: var(--accent);
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>🏠 Home Lab</h1>
+            <p>Домашняя лаборатория — сервисы и приложения</p>
+        </header>
+
+        <h2>Инфраструктура</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Proxmox</h3>
+                <p>Виртуализация и управление сервером</p>
+                <a href="https://192.168.23.11:8006" target="_blank" rel="noopener noreferrer">
+                    https://192.168.23.11:8006 ↗
+                </a>
+            </article>
+
+            <article class="card">
+                <h3>SafeLine</h3>
+                <p>Защита веб-приложений (WAF)</p>
+                <a href="http://192.168.23.11:9443" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:9443 ↗
+                </a>
+            </article>
+        </div>
+
+        <h2>Мультимедиа</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Immich</h3>
+                <p>Фотографии и видео.</p>
+                <a href="http://192.168.23.11:2283" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:2283 ↗
+                </a>
+            </article>
+
+            <article class="card">
+                <h3>StashApp</h3>
+                <p>Фильмы, сериалы и музыка.</p>
+                <a href="http://192.168.23.11:9999/" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:9999/ ↗
+                </a>
+            </article>
+            
+            <article class="card">
+                <h3>NAS</h3>
+                <p>Сетевое хранилище</p>
+                <a href="https://192.168.23.11:5001" target="_blank" rel="noopener noreferrer">
+                    https://192.168.23.11:5001 ↗
+                </a>
+            </article>
+            
+            <article class="card">
+                <h3>FileRise</h3>
+                <p>Сетевые папки</p>
+                <a href="https://192.168.23.11:8085" target="_blank" rel="noopener noreferrer">
+                    https://192.168.23.11:8085 ↗
+                </a>
+            </article>
+        
+            <article class="card">
+                <h3>Torrent</h3>
+                <p>закачка только из локальной сети</p>
+                <a href="http://192.168.23.20:9091/transmission/web/" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.20:9091/transmission/web/ ↗
+                </a>
+            </article>
+        </div>
+        
+        <h2>Планировщики</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Task manager</h3>
+                <p>Менеджер задач (в разработке)</p>
+                <a href="http://192.168.23.11:8001" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:8001 ↗
+                </a>
+            </article>
+        </div>
+        
+        <h2>Бюджет</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Firefly-iii</h3>
+                <p>менеджер расходов</p>
+                <a href="http://192.168.23.11:8800" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:8800 ↗
+                </a>
+            </article>
+        </div>
+        
+
+        <h2>Разработка и мониторинг</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Grafana - не установлено!</h3>
+                <p>Мониторинг и визуализация метрик.</p>
+                <a href="http://192.168.23.11:3000" target="_blank" rel="noopener noreferrer">
+                    http://192.168.23.11:3000 ↗
+                </a>
+            </article>
+        </div>
+
+        <footer>
+            Home Lab · Proxmox · Linux · Docker · Self-hosted
+        </footer>
+
+    </div>
+</body>
+</html>
+
